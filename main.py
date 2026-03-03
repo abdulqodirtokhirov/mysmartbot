@@ -25,7 +25,7 @@ from strings import get_text, get_utility_name, UTILITY_TYPES
 
 # ===================== CONFIGURATION =====================
 
-BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 # Exchange rates (fallback values, updated from API)
 EXCHANGE_RATES = {
@@ -1372,4 +1372,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-
